@@ -1,0 +1,66 @@
+1. Hours to complete the project: 5 hours
+
+2. Provide a short description of how you approached each problem,
+   issues you encountered, and how you resolved those issues.
+
+   Problem 1 (Multiline Comment): This problem is strightforward. In
+   the "TokenInfo", I dont need to define new symbol. Then in the
+   "Scanner", I just need ask "/" to scan nextch() comparing with
+   "*".That is the beginning with mulit-comment.And I use "while" loop
+   to control the "Scanner" of "*/".For example, the current token is
+   "*", if next token is "/", then jump out of multi-comment, else
+   still stay in it.
+
+   Problem 2 (Reserved Words): This question is easy. I defined all
+   reserved words in the "TokenInfo", and then write the image and
+   token name in the beginning of "Scanner". Actually, I just follow
+   the steps as the original file did. But be care of the typo.
+    
+   Problem 3 (Operators): This question is not hard. First, I created
+   some token names in the "TokenInfo", This step is very easy. But in
+   the original "j--" file, some operators have already defined, it
+   tooks me some time to check. Then, I ony need set up some case for
+   each operator. ">" and "<" took me most of time. I try to figure
+   the brief way to scan the "<<","<=","<", and ">",">>",">>>",">="
+   and so on.
+
+   Problem 4 (Separators): Very easy. Define colon in the "TokenInfo",
+   and add case in the "Scanner".
+
+   Problem 5 (Literals): This question is harder than before. Thanks
+   to the hint in the assignment. I can get some ideas to implement
+   this. As "INT_Literal", I define two tokens, "Long_Literal" and
+   "Double_Literal" in the "TokenInfo". Then in the "Scanner", I set
+   two boolean variable "longnumber", "doublenumber" for checking
+   double or long, default by "false". In the number scanning case, it
+   can separte to two different case, one is case '0', another is
+   '1-9'.  For example, when scanner see "0", it will look for
+   nextCh(), if the next token is ".", change longnumber or
+   doublenumber to "true". As the hint said, for <int_literal> can be
+   0 or 1-9 following by 0 or more 0-9 integer. And then
+   <long_literal> is starting with integer, following by l or L. In
+   "exponent", it starts with e or E, following by "+" or "-", ending
+   with <digits>.  And the <suffix> can be "d" or "D", standing for
+   "double". The most complicated part is <double_literal>. It's
+   composition with 4 cases. 1)digits dot optional "digits",
+   "exponent", "suffix". 2) starting with "dot", following by digits,
+   optional exp and suffix. 3) digits exp and optional suffix 4)
+   digits, optional exp, ending with suffix.
+
+3. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+    N/A
+   ...                ...          ...
+
+4. List any other comments here. Feel free to provide any feedback on
+   how much you learned from doing the assignment, and whether you
+   enjoyed doing it.
+
+   This assignment is not hard. But it contains some details and ideas
+   for "scanner" works, and how can we define a new ReservedWords or
+   Separator or Operators,even a new data type. But I need to pay
+   attention on the output. That cost me long time to check the
+   logical of "Scanner" and can fit the standard output. Thank you.

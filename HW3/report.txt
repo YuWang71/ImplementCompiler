@@ -1,0 +1,93 @@
+1. Hours to complete the project: 30 hours
+
+2. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types): This problem is not hard,
+   but have some steps to complete. First, just modify "JLiteralInt"
+   to implement "JLiteralDouble" and "JLiteralLong". Also, in the
+   "Parser", add "Double" and "Long" after "Int". But That is not
+   enough, we also need declare the type name for "LONG" and "DOUBLE"
+   in the "Type.java". It is also similar with "INT" type.
+
+   Problem 2 (Operators): This problem cost me some time, because I
+   modified some symbol names to make their images in same
+   format. Actually, this problem is not hard, I just continued on my
+   previous assignment. In hw2, I was working on the "Scanner" and
+   "TokenInfo", but this time, I worked on "Parser". I followed the
+   same steps as I did in hw1. As the Appendix C said, I implements 13
+   levels steps by steps. For each level in the "Parser", I also
+   changed the related "J.java" to connect with class in the
+   "Parser". Just be careful the "Token Name".
+   
+   Problem 3 (Conditional Expression): I finished in problem, because
+   this is the level 12. Not that hard, I also did "Parser" and then
+   set up a new Java file, called "JConditionalExpression". 
+
+   Problem 4 (Switch Statement): This question is a little complex. We
+   need think about the "Switch" expression and "Case" expression. As
+   professor hint in the class, "Switch" relates on J-file called
+   "Switch Statement" and also we assume "case" as "block", called
+   "SwitchBlockStatment". In the "Parser", I defined a method
+   "SwitchBlockStatement" for "case" expression in the "Switch"
+   statement. Also there is a method "switchLabel" for some reserved
+   word "CASE" and "DEFAULT", and must follow by "COLON".
+
+   Problem 5 (Do-While Statement): This question is quite easy. If
+   there is a "DO", then following with a block of statements, and
+   then ending with "WHILE" following by a test expression. For
+   J-file, I also set up "JDoWhile.java" to reflect with this method
+   in the "Parser"
+
+   Problem 6 (For Statement): "For" problem contains some new idea. In
+   "For" statement, I worked with the "Statement".Same as previous
+   statements, I used "HAVE" to test "FOR", following with "LPAREN" in
+   the very next.Also, I defined two objects "forInit" and "forupdate" as
+   "Appendix C" said, following with "SEMI" testing.  For these two
+   object, I defined these two objects on the side depending on the
+   "Appendix C". For J-file, I defined "forStatement" and "forInit" to
+   reflect with "<FOR>". Because "forInit" and "forUpdate" are sharing
+   same "StatementExpression" block, then I just need to define the
+   "init" one. One thing need mention here, "++", "--" can be "pre" or
+   "post", we should defined them in the "TypeDeclaration" for
+   "increment" and "decrement".
+  
+   Problem 7 (Exception Handlers): This problem contains two kind
+   problem. "throw" can work as singal statement, and connnect with a
+   J-file "JThrowStatement". Not like "throw",
+   "try-catch-final-throws" is a little bit complex. As appendix said,
+   I not only define the "Try" statement, but also define some helper
+   expression, such as "formalParameter" and so on. For J-files, I
+   defined "TryStatement" to connnect with "Parser".
+
+   Problem 8 (Interface Type Declaration): This problem is
+   different. The previous problems is about implementing
+   "Statement". It is time for "class" and "interface". To be honest,
+   it took me long time to checking the bugs. I think I followed
+   "Appendix C" strictly, for "classDeclaration",
+   "InterfaceDeclaration", "VIOD or TYPED class". This problem has
+   convered all parser mostly. Also need adding more method in the
+   "JClassDeclaration" and "JMethodDeclaration".
+
+3. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+4. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   This assignment have very simple stratagy, setuping the "reserved
+   word" or defining "methods", "statements", and write a "J-File" to
+   connnect with "Parser". But knowing the idea, it is not enough,
+   there are lots of details for each problem. It took mt long time to
+   debug a very tiny problem. For example, in problem 3 conditional
+   Expression, the idea is next level should extend previous level
+   expression name, but I was stuck in this point. I spent one hours
+   to check each line, then get the problem.
+
+

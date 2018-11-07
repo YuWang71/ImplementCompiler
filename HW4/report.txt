@@ -1,0 +1,77 @@
+1. Hours to complete the project: 10 hours
+
+2. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Part I (Additions to JavaCC Scanner)
+
+   Problem 1 (Multiline Comment): For this problem, I add a "SKIP"
+   comment to skip the multi-line commnet in j--.jj using regular
+   expression. In the regular expression, it starts with "/*", and
+   between starting and ending symbols, there are one or more "*" and
+   ending with "*/".
+
+   Problem 2 (Reserved Words): Everything is easy except
+   "default. When I defined "DEFAULT", there is a error message that
+   "lexical token name "DEFAULT" is duplicated... ". So I change
+   "DEFAULT" to "DEFAULt".
+
+   Problem 3 (Operators): For this problem, it is easy. I just copied
+   from "TokenInfo", implements all these operators.
+   
+   Problem 4 (Separators): I have no word for this problem.......
+
+   Problem 5 (Literals): In the problem, I define the two literals
+   "Double" and "Long" same as "Int". Same strategy as HW2.
+
+   Part II (Additions to JavaCC Parser)
+   
+   Problem 6 (Long and Double Basic Types): Following the "INT"
+   template. Because I have defined the J-Files "LONG" and "DOUBLE"
+   and "TYPE" file, then I dont need do anything beside "j--.jj".
+
+   Problem 7 (Operators): This problem is very same as HW3. I just
+   followed the "Appendix C" to implement all operators.
+   
+   Problem 8 (Conditional Expression): I finished it in Problem 7,
+   level 12.
+
+   Problem 9 (Switch Statement): Same as I did in HW3, I defined
+   "SwitchBlock" and "Switch", "SwitchLabel".But there are also some
+   places different. I defined some local variables default to "null."
+
+   Problem 10 (Do-While Statement): Easy! Starting with <DO> following
+   with a block statements, and <WHILE> to testing, ending with
+   <SEMI>.
+
+   Problem 11 (For Statement): I followed what I did in "Parser". And
+   there are enough templates for these problems. Also, as HW3, I have
+   to add feature in "statementExpression" for "Pre" and "Post"
+   In/Decrement.
+
+   Problem 12 (Exception Handlers): "throw" is always easy. And
+   "Try-Catch-Finally" is also similar as "Parser". "Appendix C" gives
+   enough hints.
+
+   Problem 13 (Interface Type Declaration): It is one still challenge,
+   but I have the experience on "Parser". I defined "interface" and
+   "interfaceBody" just as "class". My stretegy is adding "interface"
+   where "class" is.
+
+3. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+4. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   To be honest, it is not a challenge homework, based on the
+   experience of "HW3", but the regular expression spent me most of
+   time to understanding. I was lucky that my hw3 is correct, that
+   saved me ot of time on J-file setup.Also I learnd a lot in the
+   <LOOKAHEAD> algorithm for JavaCC.

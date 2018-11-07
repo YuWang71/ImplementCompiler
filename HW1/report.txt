@@ -1,0 +1,34 @@
+1. Hours to complete the project: 20 hours
+
+2. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Using CLEmitter): This question cost me long time to understand thses instructions. https://www.cs.umb.edu/j--/javadoc/jminusminus/CLEmitter.html. This website above is our cs department for clemitter, it contains some methods and their explainations. That is give me some hint.. In the code implemention, the most important part is to implement IsPrime class. It is a boolean class with a parmarter n. I add "IsPrime"class by using "e.addClass(accessFlags, "IsPrime", "java/lang/Object", null, ture)" and as the code said, I setup a "if" branch to compare with n and 2. Then in the "for" loop, it also contains another "if" expression, it is same as I did above. After the testing, add a constant 1 to ILOAD1 and keep looping.
+
+   Problem 2 (Division Operation): This question is not hard, just following the instruction on the book, and get the correct answer. This question gives me an idea to extend more feature for j--, it is the base of furture problems. 
+
+   Problem 3 (Remainder Operation): This question is also simple, I just followed steps in the question 2, because div and rem have similar properity.
+
+   Problem 4 (Shift Operation): This probelm is interesting. I was thinking they are very same with previous problems. But actually, there are some quite differents. In the "lexicalgrammar" file, just define new operators, "<<", ">>>"," >>". And in "grammar", I define a "level 4" for shift operations. Reference is on the Appendix C. And then in the "TokenInfo" and "scanner", I added more implements for these three shift operators. In the "JBinaryExpression", add 3 classes for them. In the "parser", that cost my some time to understand what the "level" real means. For example, "level 2" extends "level 1"'s unaryExcpression, and then "level 3" extends "level 2" 's multipicativeExpression. Then I wrote "shiftExpression" for "level 4", which extends "level 3"'s additiveExpression. That works. And then last step in "codegen()", I still got some ideas from book, Appednix D, bit instructions. 
+
+   Problem 5 (Bitwise Operations): This probelms looks simple. For the "BOR","BXOR","BAND", these three are similar as we did before. But there are still some problems to cost me time. First thing is "level" problem, and next thing is how to get correct result  in the "codegen" part in parser.java. And For "BNOT", it is a in the "unaryExpression". The other things for "BNOT" are same as before. 
+
+   Problem 6 (Unary Plus Operation): This problems is easy. I dont need add new symbol in the "grammar" or "scanner", but do some changing in the "UnaryExpression" and "parser". 
+
+3. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+    Long,Long           Students    Ideas for first problem
+    Edward, Ai          Students    talking about "level" problem
+   ...                ...          ...
+
+4. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   This project is useful as a beginning of compiler course. To be honest, I can understand the lecture in the class, but I am still confused with "how the compiler really working". This project gave me a good supplement of these concepts. From first problem, I know about the Clemitters and how it works by using "javap-v". And rest of problems, I know how to define a new operator, no matter it is binary and unary operator. 
+
+
+   

@@ -1,0 +1,74 @@
+1. Hours to complete the project: 20 hours
+
+2. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types): This problem is som
+   complicated. First thing, I modified the "JLiteralDouble" and
+   "JLiteralLong" in "analyze" and "codgen" copying from
+   "JLiteralInt". Next thing, I modified the "JBinaryExpression" to
+   add the option for "Double" and "Long" type. The Appendix D gives
+   me enough idea to implement, most of them just copying. The hardest
+   part is comming, "JVariable" and "JJVariableDeclatation". The
+   "JVariable" is easy, because I can only follow the "INT" format to
+   finish the "DOUBLE" and "LONG", but in "JVariableDeclaration", I
+   have to modify the "offset" for "Double" and "Long", not "1" but
+   "2".
+
+   Problem 2 (Operators): This problem is easier than first
+   one. Because I did this problem first, I didn't add "DOUBLE" and
+   "LONG" for some operators. As the order in Appendix C, I modified
+   the "JUnaryExpression" first, there is a template for
+   "PreIncrementOp" and "LogicalNotOp". That is enough to implement
+   the rest of them. In the "JComparison" and "BinaryExpression", I
+   also followed the templates to finish these operators. In the end,
+   there are lots of changing "JAssignExpression", lucky, you gave us
+   enought templates, and others dont need very huge changing.
+
+   Problem 3 (Conditional Expression): It is very smimilar with "if"
+   statement, but in the "JConditionalExpression", I add one more
+   "mustMatchExpect(BOOLEAN)" method to analyze other expression. And
+   for "codegen" part, I setup 2 labels, one for firstExpression,
+   other for secondExpression. When the condition is true, just jump
+   to firstExpression, otherwise, jump to secondExpression.
+   
+   Problem 4 (Switch Statement): ...
+
+   Problem 5 (Do-while Statement): In "JDoWhileStatement", I add a
+   "mustMathchExpected" in analyze just as "if" statement, to check
+   mathcing with expected line, the context body and return. The
+   codegen is not hard, just add a branch out of the "for" loop if the
+   condition is false in the test expression, the body will be
+   outputed with the expression after updating. Also, this problem's
+   solution is on the "StudyGuide", just uniform the varibale name
+   with the original file.
+
+   Problem 6 (For Statement): This problem is not hard, but it cost me
+   lots of time. "analyze" is easy, they obey the same or similar
+   strategy to implement. But the codgen are very different. In
+   "ForInit", I add a "variavle declaration" for the loop statement,
+   and also "expression" part is similar as "do-while" or "if"
+   statement. If label is outputed with a false value, then we jump
+   out of loop with out label. In the end, I also add codgen() in
+   "ForStatement" for updating, I use "GOTO" for jumping the test
+   expression for the rest of loop.
+
+   Problem 7 (Interface Type Declarations): ...
+
+   Problem 8 (Exception Handlers): ...
+
+3. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+4. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   This project is so hard, it is not on the same level with previous
+   project....But this is the last problem, Thank you for your
+   teaching. You are my frist and last professor in the University.
